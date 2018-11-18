@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a class="btn btn-default" href="/">Back to Stagiaires</a>
+<h2 class="page-header">{{stg.lastName}}</h2>
+<ul class="list-group">
+    <li class="list-group-item">LastName:{{stg.firstName}}</li>
+    <li class="list-group-item">LastName:{{stg.lastName}}</li>
+    <li class="list-group-item">LastName:{{stg.userName}}</li>
+</ul>
+{% endblock %}

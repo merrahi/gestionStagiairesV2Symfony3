@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    LIST STAGIAIRE
+<table class="table table-striped"> 
+    <thead> 
+        <tr> <th>#</th> 
+            <th>First Name</th> 
+            <th>Last Name</th> 
+            <th>Username</th> </tr>
+    </thead> 
+    <tbody> 
+        {% for stg in stgs %}
+        <tr> <th scope="row">{{stg.id}}</th> 
+            <td>{{stg.firstName}}</td> 
+            <td>{{stg.lastName}}</td> 
+            <td>{{stg.userName}}</td>
+            <td>
+                <a href="/stagiaire/details/{{stg.id}}" class="btn btn-success">View</a>
+                <a href="/stagiaire/edit/{{stg.id}}" class="btn btn-default">edit</a>
+                <a href="/stagiaire/delete/{{stg.id}}" class="btn btn-danger">delete</a>
+            </td>
+        </tr> 
+        {% endfor %}
+       
+    </tbody> 
+</table>
+
+{% endblock %}
